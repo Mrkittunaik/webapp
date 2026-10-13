@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Smart Home System</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#071D4A;--dark:#0B2D67;--cyan:#087FC1;--btn:#2783FF;--lt:#BDD9F5;--gray:#777}
+*{box-sizing:border-box;margin:0}
+html,body{min-height:100%;background:#f4f6fa}
+body{display:flex;justify-content:center;align-items:center;min-height:100vh;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);font-family:'Fredoka','Nunito','Arial Rounded MT Bold',system-ui,sans-serif;overflow-x:hidden}
+.card{--u:calc(min(100vw,430px)/775);width:calc(775*var(--u));height:calc(1694*var(--u));position:relative;background:#fff;border-radius:calc(90*var(--u));overflow:hidden;box-shadow:0 10px 40px rgba(7,29,74,.12)}
+.photo{position:absolute;left:0;top:0;width:100%;height:calc(1242*var(--u));border-radius:calc(90*var(--u)) calc(90*var(--u)) 0 0;overflow:hidden;
+background:radial-gradient(ellipse 70% 40% at 55% 62%,#0a7bc4 0%,rgba(10,123,196,0) 100%),linear-gradient(180deg,#071d4a 0%,#0b3d86 40%,#0a62ae 62%,#0b57a8 80%,#0a3f8a 100%)}
+.photo i{position:absolute;display:block}
+.wire{width:calc(2*var(--u));background:#cfe3f7;top:0}
+.globe{border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#c9dcf2 55%,#8fb2dc);box-shadow:0 0 calc(30*var(--u)) rgba(190,220,255,.5)}
+.door{background:#0b57a8;border:calc(22*var(--u)) solid #0c5db4;border-bottom:0;box-shadow:inset 0 0 calc(30*var(--u)) rgba(0,0,0,.25)}
+.shade{background:linear-gradient(90deg,#d9e8f8,#a9c8ec);border-radius:calc(4*var(--u))}
+.stem{background:#6fa4d9;width:calc(14*var(--u))}
+.chair{background:#2f78c4;border-radius:50% 50% 0 0;box-shadow:inset 0 calc(10*var(--u)) calc(20*var(--u)) rgba(255,255,255,.2)}
+h1{position:absolute;left:calc(100*var(--u));top:calc(138*var(--u));font-size:calc(104*var(--u));line-height:calc(123*var(--u));font-weight:700;color:#fff;letter-spacing:calc(-1*var(--u));white-space:nowrap;text-shadow:0 0 calc(6*var(--u)) rgba(255,255,255,.6)}
+h1 span{color:#eef5fd}
+.blk{position:absolute;top:calc(955*var(--u));height:calc(257*var(--u));width:calc(367*var(--u));background:#fff}
+.blk.l{left:0;border-radius:0 calc(55*var(--u)) calc(55*var(--u)) 0}
+.blk.r{right:0;width:calc(365*var(--u));border-radius:calc(55*var(--u)) 0 0 calc(55*var(--u))}
+.blk::before{content:"";position:absolute;top:calc(-90*var(--u));width:calc(90*var(--u));height:calc(90*var(--u))}
+.blk.l::before{left:0;background:radial-gradient(circle at 100% 0,transparent calc(89*var(--u)),#fff calc(90*var(--u)))}
+.blk.r::before{right:0;background:radial-gradient(circle at 0 0,transparent calc(89*var(--u)),#fff calc(90*var(--u)))}
+.blk.l::after,.blk.r::after{content:"";position:absolute;top:0;width:calc(60*var(--u));height:calc(60*var(--u))}
+.start{position:absolute;left:calc(25*var(--u));top:calc(1212*var(--u));width:calc(727*var(--u));height:calc(285*var(--u));border:0;border-radius:999px;padding:calc(16*var(--u));cursor:pointer;z-index:2;animation:pop .8s cubic-bezier(.2,1.4,.4,1) both,float 4s ease-in-out .8s infinite;
+background:linear-gradient(135deg,rgba(255,255,255,.55),rgba(255,255,255,.12));border:calc(3*var(--u)) solid rgba(255,255,255,.75);-webkit-backdrop-filter:blur(18px) saturate(170%);backdrop-filter:blur(18px) saturate(170%);box-shadow:0 calc(30*var(--u)) calc(60*var(--u)) rgba(7,29,74,.28),inset 0 calc(2*var(--u)) calc(2*var(--u)) rgba(255,255,255,.9),inset 0 calc(-8*var(--u)) calc(24*var(--u)) rgba(39,131,255,.18);transition:filter .15s,box-shadow .15s;font-family:inherit}
+.start span{display:flex;align-items:center;justify-content:center;width:100%;height:100%;border-radius:999px;background:linear-gradient(180deg,rgba(255,255,255,.65),rgba(255,255,255,.15));box-shadow:inset 0 0 0 calc(2*var(--u)) rgba(255,255,255,.5);color:var(--navy);font-weight:700;font-size:calc(88*var(--u));letter-spacing:calc(-1*var(--u))}
+.start:hover{filter:brightness(1.06)}
+.start:active{filter:brightness(.95)}
+.orb{position:absolute;border-radius:50%;filter:blur(calc(28*var(--u)));z-index:1;animation:float 5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(calc(-14*var(--u)))}}
+@keyframes pop{from{opacity:0;transform:scale(.8) translateY(calc(40*var(--u)))}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.start,.orb{animation:none}}
+.reg-row{position:absolute;left:calc(88*var(--u));right:calc(60*var(--u));top:calc(1552*var(--u));height:calc(95*var(--u));display:flex;align-items:center;justify-content:space-between}
+.reg-row p{color:var(--gray);font-weight:600;font-size:calc(31*var(--u));white-space:nowrap}
+.reg{height:100%;width:calc(308*var(--u));border:0;border-radius:999px;cursor:pointer;color:#fff;font-family:inherit;font-weight:600;font-size:calc(33*var(--u));background:linear-gradient(180deg,#3d92ff,#1f6cf5);box-shadow:0 calc(8*var(--u)) calc(16*var(--u)) rgba(39,131,255,.35);transition:transform .15s}
+.reg:hover{transform:translateY(-2px)}.reg:active{transform:scale(.97)}
+button:focus-visible{outline:3px solid #2783FF;outline-offset:3px}
+</style></head>
+<body>
+<main class="card" aria-label="Smart home onboarding">
+  <div class="photo" aria-hidden="true">
+    <i class="wire" style="left:calc(114*var(--u));height:calc(790*var(--u))"></i>
+    <i class="wire" style="left:calc(190*var(--u));height:calc(590*var(--u))"></i>
+    <i class="globe" style="left:calc(130*var(--u));top:calc(610*var(--u));width:calc(104*var(--u));height:calc(114*var(--u))"></i>
+    <i class="globe" style="left:calc(62*var(--u));top:calc(765*var(--u));width:calc(114*var(--u));height:calc(124*var(--u))"></i>
+    <i class="door" style="left:calc(213*var(--u));top:calc(690*var(--u));width:calc(262*var(--u));height:calc(340*var(--u))"></i>
+    <i class="shade" style="left:calc(428*var(--u));top:calc(786*var(--u));width:calc(118*var(--u));height:calc(110*var(--u))"></i>
+    <i class="stem" style="left:calc(484*var(--u));top:calc(896*var(--u));height:calc(70*var(--u))"></i>
+    <i class="door" style="left:calc(675*var(--u));top:calc(772*var(--u));width:calc(120*var(--u));height:calc(200*var(--u));opacity:.9"></i>
+    <i class="chair" style="left:calc(320*var(--u));top:calc(955*var(--u));width:calc(310*var(--u));height:calc(300*var(--u))"></i>
+  </div>
+  <h1>Welcome to<br><span>Smart home<br>System</span></h1>
+  <div class="blk l"></div><div class="blk r"></div>
+  <i class="orb" style="left:calc(60*var(--u));top:calc(1250*var(--u));width:calc(300*var(--u));height:calc(200*var(--u));background:#0B2D67;opacity:.75"></i>
+  <i class="orb" style="left:calc(400*var(--u));top:calc(1290*var(--u));width:calc(300*var(--u));height:calc(190*var(--u));background:#0aa0dc;opacity:.8;animation-delay:-2s"></i>
+  <button class="start" id="start" type="button" aria-label="Let's start"><span>Let’s start</span></button>
+  <div class="reg-row">
+    <p>Don’t have account?</p>
+    <button class="reg" id="register" type="button">Register now</button>
+  </div>
+</main>
+<script>
+// Hook these into your router / auth flow
+document.getElementById('start').addEventListener('click',()=>document.dispatchEvent(new CustomEvent('onboarding:start')));
+document.getElementById('register').addEventListener('click',()=>document.dispatchEvent(new CustomEvent('onboarding:register')));
+</script>
+</body></html>
