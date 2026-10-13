@@ -1,0 +1,24 @@
+/* LaunchMyWeb - Plans page */
+.app{position:relative;width:100%;max-width:430px;height:100%;overflow:hidden;background:var(--bg)}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:var(--card);border:1px solid var(--bd);border-radius:var(--r);padding:4px;margin:6px 0 16px;box-shadow:var(--sh)}
+.seg button{border:0;background:none;color:var(--mut);padding:10px;border-radius:var(--r);font:600 14px Outfit,system-ui,sans-serif;cursor:pointer;transition:.25s}
+.seg button.on{background:var(--g);color:#fff;box-shadow:var(--bsh)}
+.seg button svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-3px;margin-right:6px}
+.seg button small{display:block;font-size:11px;font-weight:500;opacity:.85}
+.cont{padding:0;overflow:hidden}
+.ch{padding:22px 18px;color:#fff;background:linear-gradient(135deg,rgba(124,58,237,.9),rgba(236,72,153,.78)),var(--img) center 30%/cover}
+.ch h2{font-size:40px;line-height:1.05}
+.ch p{font-size:14px;opacity:.93;margin-top:8px;line-height:1.45}
+.cb{padding:16px}
+.cb .seg{margin:0 0 4px}
+.note{font-size:13px;color:var(--mut);margin:12px 0 14px;line-height:1.45}
+.app{border:1px solid var(--bd);border-radius:var(--r);padding:14px;margin-top:12px;box-shadow:var(--sh)}
+.ah{display:flex;align-items:center;gap:12px}
+.an{flex:1;min-width:0}
+.an b{display:block;font-size:16px;font-weight:600}
+.an span{display:block;font-size:13px;color:var(--mut);margin-top:2px}
+.ap{flex:none;text-align:right}
+.ap b{display:block;font-size:26px;font-weight:700;line-height:1.1;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ap small{font-size:12px;color:var(--mut)}
+.pay{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:12px 0;font-size:13px;color:var(--mut)}
+.chip{font-size:12px;font-weight:600;padding:4px 8px;border-radius:var(--r);background:linear-gradient(135deg,rgba(124,58,237,.12),rgba(236,72,153,.16));color:#9b2fd6}
