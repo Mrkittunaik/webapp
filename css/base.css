@@ -1,6 +1,6 @@
 /* LaunchMyWeb - shared: tokens, layout, nav, buttons, cards */
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-:root{color-scheme:light;--img:url(../images/profile-bg.jpg);--bg:#fff;--card:#fff;--tx:#1b1230;--mut:#6d6488;--bd:#efe7fb;--bsh:0 8px 18px rgba(192,38,211,.38);--r:8px;--g:linear-gradient(135deg,#7c3aed 0%,#c026d3 55%,#ec4899 100%);--sh:0 6px 22px rgba(124,58,237,.16),0 1px 4px rgba(124,58,237,.1)}
+:root{color-scheme:light;--img:url(../images/banner-bg.png);--bg:#fff;--card:#fff;--tx:#1b1230;--mut:#6d6488;--bd:#efe7fb;--bsh:0 8px 18px rgba(192,38,211,.38);--r:8px;--g:linear-gradient(135deg,#7c3aed 0%,#c026d3 55%,#ec4899 100%);--sh:0 6px 22px rgba(124,58,237,.16),0 1px 4px rgba(124,58,237,.1)}
 html,body{height:100%}
 body{font-family:'Outfit',system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--tx);display:flex;justify-content:center;overflow:hidden}
 .br{font-family:'Caveat Brush','Permanent Marker','Segoe Script',cursive;font-weight:400;letter-spacing:.5px}
