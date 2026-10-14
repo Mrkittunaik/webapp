@@ -2,7 +2,7 @@
 .hero{background:var(--img) center/cover;color:var(--tx);border:0;padding:20px;box-shadow:0 10px 24px rgba(60,110,160,.25)}
 .hero h2{font-size:52px;line-height:1}
 .hero p{opacity:.9;font-size:14px}
-.bar{height:6px;border-radius:var(--r);background:rgba(27,18,48,.15);margin:14px 0 6px;overflow:hidden}
+.bar{height:6px;border-radius:var(--r);background:rgba(15,40,70,.15);margin:14px 0 6px;overflow:hidden}
 .bar i{display:block;height:100%;width:68%;background:var(--tx)}
 .row{display:flex;justify-content:space-between;align-items:center;gap:10px}
 .hero .row{margin-bottom:6px}
