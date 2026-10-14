@@ -18,7 +18,7 @@
 .an b{display:block;font-size:16px;font-weight:600}
 .an span{display:block;font-size:13px;color:var(--mut);margin-top:2px}
 .ap{flex:none;text-align:right}
-.ap b{display:block;font-size:26px;font-weight:700;line-height:1.1;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ap b{display:block;font-size:26px;font-weight:700;line-height:1.1;color:#000}
 .ap small{font-size:12px;color:var(--mut)}
 .pay{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:12px 0;font-size:13px;color:var(--mut)}
-.chip{font-size:12px;font-weight:600;padding:4px 8px;border-radius:var(--r);background:linear-gradient(135deg,rgba(124,58,237,.12),rgba(236,72,153,.16));color:#9b2fd6}
+.chip{font-size:12px;font-weight:600;padding:4px 8px;border-radius:var(--r);background:linear-gradient(135deg,rgba(124,58,237,.12),rgba(236,72,153,.16));color:#000}
